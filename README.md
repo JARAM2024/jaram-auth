@@ -1,24 +1,10 @@
-# Fiber backend template for [Create Go App CLI](https://github.com/create-go-app/cli)
-
-<img src="https://img.shields.io/badge/Go-1.19+-00ADD8?style=for-the-badge&logo=go" alt="go version" />&nbsp;<a href="https://goreportcard.com/report/github.com/jaram2024/jaram-auth" target="_blank"><img src="https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none" alt="go report" /></a>&nbsp;<img src="https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none" alt="license" />
-
-[Fiber](https://gofiber.io/) is an Express.js inspired web framework build on top of Fasthttp, the fastest HTTP engine for Go. Designed to ease things up for **fast** development with **zero memory allocation** and **performance** in mind.
+# JARAM-Auth
+Authentication server for entire service of JARAM
 
 ## ⚡️ Quick start
 
-1. Create a new project with Fiber:
-
-```bash
-cgapp create
-
-# Choose a backend framework:
-#   net/http
-# > fiber
-#   chi
-```
-
-2. Rename `.env.example` to `.env` and fill it with your environment values.
-3. Install [Docker](https://www.docker.com/get-started) and the following useful Go tools to your system:
+1. Rename `.env.example` to `.env` and fill it with your environment values.
+2. Install [Docker](https://www.docker.com/get-started) and the following useful Go tools to your system:
 
    - [golang-migrate/migrate](https://github.com/golang-migrate/migrate#cli-usage) for apply migrations
    - [github.com/swaggo/swag](https://github.com/swaggo/swag) for auto-generating Swagger API docs
@@ -26,7 +12,7 @@ cgapp create
    - [github.com/go-critic/go-critic](https://github.com/go-critic/go-critic) for checking Go the best practice issues
    - [github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint) for checking Go linter issues
 
-4. Run project by this command:
+3. Run project by this command:
 
 ```bash
 make docker.run
@@ -36,7 +22,7 @@ make docker.run
 
 ![Screenshot](https://user-images.githubusercontent.com/11155743/112715187-07dab100-8ef0-11eb-97ea-68d34f2178f6.png)
 
-## 🗄 Template structure
+## 🗄 structure
 
 ### ./app
 
@@ -91,7 +77,7 @@ JWT_REFRESH_KEY_EXPIRE_HOURS_COUNT=720
 
 # Database settings:
 DB_TYPE="pgx"   # pgx or mysql
-DB_HOST="cgapp-postgres"
+DB_HOST="postgres"
 DB_PORT=5432
 DB_USER="postgres"
 DB_PASSWORD="password"
@@ -102,12 +88,11 @@ DB_MAX_IDLE_CONNECTIONS=10
 DB_MAX_LIFETIME_CONNECTIONS=2
 
 # Redis settings:
-REDIS_HOST="cgapp-redis"
+REDIS_HOST="redis"
 REDIS_PORT=6379
 REDIS_PASSWORD=""
 REDIS_DB_NUMBER=0
 ```
 
 ## ⚠️ License
-
-Apache 2.0 &copy; [Vic Shóstak](https://shostak.dev/) & [True web artisans](https://1wa.co/).
+MIT License &copy; JARAM
